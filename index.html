@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medbay – المتجر الطبي</title>
+<meta name="description" content="متجر Medbay للأجهزة والأدوات الطبية في مصر. تسوق أجهزة وأدوات طبية معقمة، أجهزة قلب، أسنان، جراحة، عظام، عيون، أطفال وتمريض مع توصيل سريع وخدمة موثوقة.">
+<meta name="keywords" content="أجهزة طبية, متجر طبي, معدات طبية, صيدلية, أدوات طبية, جراحة, قلب, أسنان, عظام, عيون, تمريض, أجهزة طبية مصر">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Medbay – المتجر الطبي | أجهزة طبية وأدوات صحية">
+<meta property="og:description" content="متجر Medbay يقدم أجهزة طبية عالية الجودة وأدوات صحية مع شحن سريع وخدمة دفع آمن في مصر.">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:site_name" content="Medbay">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Medbay – المتجر الطبي | أجهزة طبية وأدوات صحية">
+<meta name="twitter:description" content="تسوق أجهزة طبية وأدوات صحية في Medbay مع خيارات الدفع الآمن والشحن السريع في مصر.">
+<meta name="theme-color" content="#1a7a4a">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Medbay",
+  "description": "متجر Medbay للأجهزة والأدوات الطبية في مصر. تسوق معدات طبية معقمة، أجهزة قلب، أجهزة تنفس، أدوات أسنان، وأجهزة تشخيص.",
+  "url": "https://yourwebsite.com/medbay-store.html",
+  "logo": "https://yourwebsite.com/logo.svg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "EG"
+  },
+  "sameAs": [
+    "https://www.facebook.com/Medbay",
+    "https://www.instagram.com/Medbay"
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1a7a4a;
+    --green-light: #e8f5ee;
+    --green-mid: #2ecc71;
+    --green-dark: #0f5c35;
+    --red: #c0392b;
+    --red-light: #fdf0ef;
+    --red-mid: #e74c3c;
+    --blue: #1a5f9a;
+    --blue-light: #eaf3fb;
+    --blue-mid: #2980b9;
+    --blue-dark: #0d3f6b;
+    --white: #ffffff;
+    --bg: #f7f9fc;
+    --bg2: #f0f4f8;
+    --text: #1a202c;
+    --text2: #4a5568;
+    --text3: #718096;
+    --border: #e2e8f0;
+    --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+    --radius: 14px;
+    --radius-lg: 20px;
+    --radius-sm: 8px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    direction: rtl;
+    overflow-x: hidden;
+  }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .nav-top {
+    background: var(--green-dark);
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 6px;
+    letter-spacing: 0.3px;
+  }
+
+  .nav-main {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 70px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .logo-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .logo-icon.fallback {
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .logo-text span:first-child {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--green-dark);
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  .logo-text span:last-child {
+    font-size: 10px;
+    color: var(--text3);
+    font-weight: 400;
+  }
+
+  .search-bar {
+    flex: 1;
+    display: flex;
+    background: var(--bg);
+    border: 1.5px solid var(--border);
+    border-radius: 50px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+
+  .search-bar:focus-within {
+    border-color: var(--green);
+  }
+
+  .search-bar input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 18px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    outline: none;
+    direction: rtl;
+  }
+
+  .search-bar button {
+    background: var(--green);
+    border: none;
+    color: white;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-bar button:hover { background: var(--green-dark); }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s;
+    color: var(--text2);
+    font-family: 'Cairo', sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+  }
+
+  .nav-btn:hover { background: var(--bg2); color: var(--green); }
+  .nav-btn svg { width: 22px; height: 22px; }
+
+  .cart-btn {
+    position: relative;
+    background: var(--green-light);
+    border: 1.5px solid var(--green);
+    color: var(--green-dark);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+    font-family: 'Cairo', sans-serif;
+    white-space: nowrap;
+  }
+
+  .cart-btn:hover { background: var(--green); color: white; }
+
+  .cart-badge {
+    background: var(--red-mid);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Categories nav */
+  .cats-bar {
+    border-top: 1px solid var(--border);
+    background: var(--white);
+  }
+
+  .cats-bar-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .cats-bar-inner::-webkit-scrollbar { display: none; }
+
+  .cat-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text2);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .cat-link:hover, .cat-link.active {
+    color: var(--green);
+    border-bottom-color: var(--green);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--blue-dark) 60%, #0a2d4f 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(46,204,113,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: 20%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(41,128,185,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .hero-text { flex: 1; color: white; }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-badge span { width: 6px; height: 6px; background: var(--green-mid); border-radius: 50%; }
+
+  .hero-title {
+    font-size: clamp(28px, 4vw, 52px);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--green-mid);
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    opacity: 0.85;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    max-width: 450px;
+    font-weight: 400;
+  }
+
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--green-mid);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(46,204,113,0.4);
+  }
+
+  .btn-primary:hover {
+    background: white;
+    color: var(--green-dark);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .btn-outline:hover { background: rgba(255,255,255,0.12); }
+
+  .hero-stats {
+    display: flex;
+    gap: 24px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .hero-stat strong {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--green-mid);
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  .hero-stat small { font-size: 12px; opacity: 0.75; }
+
+  .hero-visual {
+    width: 360px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .hero-card-float {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    color: white;
+  }
+
+  .offer-tag {
+    background: var(--red-mid);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  .hero-card-float h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+
+  .hero-card-float p {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 16px;
+  }
+
+  .hero-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .hero-price .new { font-size: 28px; font-weight: 900; color: var(--green-mid); }
+  .hero-price .old { font-size: 14px; opacity: 0.6; text-decoration: line-through; }
+
+  .progress-label { font-size: 12px; opacity: 0.8; margin-bottom: 6px; }
+
+  .progress-bar-wrap {
+    background: rgba(255,255,255,0.2);
+    border-radius: 50px;
+    height: 6px;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--green-mid);
+    border-radius: 50px;
+    width: 65%;
+    transition: width 1s;
+  }
+
+  .mini-pills { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
+
+  .mini-pill {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: white;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 50px;
+  }
+
+  /* ===== TRUST BAR ===== */
+  .trust-bar {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+  }
+
+  .trust-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 20px;
+    border-left: 1px solid var(--border);
+  }
+
+  .trust-item:last-child { border-left: none; }
+
+  .trust-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .trust-icon.green { background: var(--green-light); }
+  .trust-icon.blue { background: var(--blue-light); }
+  .trust-icon.red { background: var(--red-light); }
+  .trust-icon.amber { background: #fff8e1; }
+
+  .trust-text strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .trust-text span { font-size: 11px; color: var(--text3); }
+
+  /* ===== SECTION ===== */
+  .section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+
+  .section-head h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text);
+    font-family: 'Tajawal', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-head h2::before {
+    content: '';
+    width: 4px;
+    height: 24px;
+    background: var(--green);
+    border-radius: 2px;
+  }
+
+  .see-all {
+    font-size: 13px;
+    color: var(--blue);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: gap 0.2s;
+  }
+
+  .see-all:hover { gap: 8px; }
+
+  /* ===== CATEGORIES GRID ===== */
+  .cats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+  }
+
+  .cat-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cat-card:hover {
+    border-color: var(--green);
+    background: var(--green-light);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+  }
+
+  .cat-card.active {
+    border-color: var(--green);
+    background: var(--green-light);
+  }
+
+  .cat-emoji {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .cat-card span {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  /* ===== PRODUCT GRID ===== */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+  }
+
+  .product-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.25s;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .product-card:hover {
+    border-color: var(--green);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .product-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px;
+  }
+
+  .badge-sale { background: var(--red-mid); color: white; }
+  .badge-new { background: var(--blue-mid); color: white; }
+  .badge-best { background: var(--green); color: white; }
+
+  .product-img {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    position: relative;
+    overflow: hidden;
+    background: #f7f9fc;
+  }
+
+  .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+    transition: transform 0.35s ease;
+  }
+
+  .product-card:hover .product-img img { transform: scale(1.07); }
+
+  .product-img .img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: var(--text3);
+  }
+
+  .product-img .img-placeholder span { font-size: 44px; }
+  .product-img .img-placeholder small { font-size: 11px; font-family: 'Cairo', sans-serif; }
+
+  .product-wishlist {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 32px;
+    height: 32px;
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .product-wishlist:hover { border-color: var(--red-mid); background: var(--red-light); }
+  .product-wishlist.active { border-color: var(--red-mid); background: var(--red-light); color: var(--red-mid); }
+
+  .product-body {
+    padding: 14px;
+  }
+
+  .product-cat-tag {
+    font-size: 11px;
+    color: var(--blue);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .product-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.4;
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: var(--text3);
+    margin-bottom: 10px;
+  }
+
+  .stars { color: #f59e0b; font-size: 12px; }
+
+  .product-price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .price-wrap { display: flex; align-items: baseline; gap: 6px; }
+
+  .price-new {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--green-dark);
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  .price-currency { font-size: 12px; font-weight: 700; color: var(--green-dark); }
+  .price-old { font-size: 12px; color: var(--text3); text-decoration: line-through; }
+
+  .add-btn {
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.2s;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .add-btn:hover { background: var(--green-dark); transform: scale(1.05); }
+  .add-btn.added { background: var(--blue); }
+
+  /* ===== OFFER BANNERS ===== */
+  .banners-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .banner {
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    position: relative;
+    min-height: 160px;
+  }
+
+  .banner-1 { background: linear-gradient(135deg, #1a7a4a, #0f5c35); }
+  .banner-2 { background: linear-gradient(135deg, #1a5f9a, #0d3f6b); }
+
+  .banner-text { flex: 1; color: white; z-index: 1; }
+  .banner-text small { font-size: 12px; opacity: 0.8; font-weight: 600; }
+  .banner-text h3 { font-size: 20px; font-weight: 900; margin: 6px 0; font-family: 'Tajawal', sans-serif; }
+  .banner-text p { font-size: 13px; opacity: 0.85; margin-bottom: 14px; }
+
+  .banner-btn {
+    background: white;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .banner-1 .banner-btn { color: var(--green-dark); }
+  .banner-2 .banner-btn { color: var(--blue-dark); }
+  .banner-btn:hover { transform: scale(1.05); }
+
+  .banner-emoji { font-size: 64px; z-index: 1; }
+
+  /* ===== CART SIDEBAR ===== */
+  .cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .cart-overlay.open { opacity: 1; pointer-events: all; }
+
+  .cart-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 380px;
+    max-width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 2001;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .cart-sidebar.open { transform: translateX(0); }
+
+  .cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cart-header h3 { font-size: 17px; font-weight: 800; }
+
+  .cart-close {
+    width: 34px;
+    height: 34px;
+    border: 1.5px solid var(--border);
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .cart-close:hover { background: var(--bg2); }
+
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cart-empty {
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--text3);
+  }
+
+  .cart-empty .empty-icon { font-size: 52px; margin-bottom: 12px; }
+  .cart-empty p { font-size: 14px; margin-bottom: 16px; }
+
+  .cart-item {
+    display: flex;
+    gap: 12px;
+    background: var(--bg);
+    border-radius: var(--radius);
+    padding: 12px;
+    align-items: center;
+    border: 1px solid var(--border);
+  }
+
+  .cart-item-icon {
+    width: 52px;
+    height: 52px;
+    background: white;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+  }
+
+  .cart-item-info { flex: 1; min-width: 0; }
+  .cart-item-info .name { font-size: 13px; font-weight: 700; line-height: 1.3; margin-bottom: 4px; }
+  .cart-item-info .price { font-size: 14px; font-weight: 900; color: var(--green-dark); font-family: 'Tajawal', sans-serif; }
+
+  .qty-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .qty-btn {
+    width: 26px;
+    height: 26px;
+    border: 1.5px solid var(--border);
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: all 0.15s;
+  }
+
+  .qty-btn:hover { border-color: var(--green); color: var(--green); }
+  .qty-num { font-size: 14px; font-weight: 700; min-width: 20px; text-align: center; }
+
+  .item-remove {
+    background: none;
+    border: none;
+    color: var(--text3);
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.2s;
+    padding: 4px;
+  }
+
+  .item-remove:hover { color: var(--red-mid); }
+
+  .cart-footer {
+    border-top: 1px solid var(--border);
+    padding: 16px;
+  }
+
+  .cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: var(--text2);
+  }
+
+  .cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 800;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+  }
+
+  .cart-total span:last-child { color: var(--green-dark); font-family: 'Tajawal', sans-serif; }
+
+  .checkout-btn {
+    width: 100%;
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.2s;
+    margin-bottom: 8px;
+  }
+
+  .checkout-btn:hover { background: var(--green-dark); }
+
+  .continue-btn {
+    width: 100%;
+    background: none;
+    color: var(--text2);
+    border: 1.5px solid var(--border);
+    padding: 11px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Cairo', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .continue-btn:hover { border-color: var(--green); color: var(--green); }
+
+  /* ===== TOAST ===== */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: var(--green-dark);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 9999;
+    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #0d1f14;
+    color: rgba(255,255,255,0.8);
+    padding: 50px 0 20px;
+    margin-top: 30px;
+  }
+
+  .footer-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-brand .logo-text span:first-child { color: var(--green-mid); }
+  .footer-brand .logo-text span:last-child { color: rgba(255,255,255,0.5); }
+  .footer-brand p { font-size: 13px; line-height: 1.7; margin-top: 14px; opacity: 0.7; }
+
+  footer h4 { font-size: 14px; font-weight: 800; color: white; margin-bottom: 16px; }
+
+  footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+  footer ul li a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+
+  footer ul li a:hover { color: var(--green-mid); }
+
+  .footer-bottom {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    opacity: 0.55;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .social-links { display: flex; gap: 10px; }
+
+  .social-link {
+    width: 32px;
+    height: 32px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+  }
+
+  .social-link:hover { background: rgba(255,255,255,0.15); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 768px) {
+    .hero-visual { display: none; }
+    .trust-inner { grid-template-columns: 1fr 1fr; }
+    .trust-item { border-left: none; border-bottom: 1px solid var(--border); }
+    .trust-item:nth-child(3), .trust-item:nth-child(4) { border-bottom: none; }
+    .banners-grid { grid-template-columns: 1fr; }
+    .nav-main { gap: 10px; }
+    .nav-btn span { display: none; }
+    .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  @media (max-width: 480px) {
+    .trust-inner { grid-template-columns: 1fr; }
+    .trust-item { border-left: none; border-bottom: 1px solid var(--border); }
+    .trust-item:last-child { border-bottom: none; }
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .cats-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero-stats { gap: 14px; }
+  }
+
+  @media (max-width: 360px) {
+    .products-grid { grid-template-columns: 1fr; }
+    .search-bar { display: none; }
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section { animation: fadeInUp 0.5s ease forwards; }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR TOP -->
+<div class="nav-top">🚚 شحن مجاني للطلبات فوق 300 جنيه &nbsp;|&nbsp; ✅ منتجات معتمدة ومرخصة &nbsp;|&nbsp; 📞 خط ساخن: 19XXX</div>
+
+<!-- NAVBAR MAIN -->
+<nav>
+  <div class="nav-main">
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <div class="logo-icon" id="logoIconNav"></div>
+      <div class="logo-text">
+        <span>Medbay</span>
+        <span>الصيدلية الطبية</span>
+      </div>
+    </a>
+
+    <!-- Search -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="ابحث عن دواء، جهاز طبي..." oninput="filterProducts()">
+      <button onclick="filterProducts()">🔍</button>
+    </div>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <a class="nav-btn" href="#">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        <span>حسابي</span>
+      </a>
+      <a class="nav-btn" href="#">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        <span>المفضلة</span>
+      </a>
+      <button class="cart-btn" onclick="toggleCart()">
+        🛒 السلة
+        <div class="cart-badge" id="cartBadge">0</div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Categories Bar -->
+  <div class="cats-bar">
+    <div class="cats-bar-inner">
+      <a class="cat-link active" onclick="filterByCategory('all',this)">🏠 الكل</a>
+      <a class="cat-link" onclick="filterByCategory('قلب',this)">❤️ القلب والأوعية</a>
+      <a class="cat-link" onclick="filterByCategory('أسنان',this)">🦷 أسنان</a>
+      <a class="cat-link" onclick="filterByCategory('جراحة',this)">🔪 جراحة</a>
+      <a class="cat-link" onclick="filterByCategory('تنفس',this)">🫁 الجهاز التنفسي</a>
+      <a class="cat-link" onclick="filterByCategory('عظام',this)">🦴 عظام وعمود فقري</a>
+      <a class="cat-link" onclick="filterByCategory('باطنة',this)">🩺 باطنة وتشخيص</a>
+      <a class="cat-link" onclick="filterByCategory('عيون',this)">👁️ عيون</a>
+      <a class="cat-link" onclick="filterByCategory('أطفال',this)">👶 أطفال</a>
+      <a class="cat-link" onclick="filterByCategory('تمريض',this)">🏥 تمريض ورعاية</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge"><span></span> المنصة الطبية الأولى في مصر</div>
+      <h1 class="hero-title">صحتك <em>أولويتنا</em><br>كل ما تحتاجه<br>في مكان واحد</h1>
+      <p class="hero-sub">أدوات وأجهزة طبية متخصصة لجميع التخصصات — جراحة، قلب، أسنان، عظام، عيون وأكثر — بأعلى معايير الجودة والتعقيم</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="document.querySelector('.section').scrollIntoView({behavior:'smooth'})">تسوق الآن</button>
+        <button class="btn-outline">تصفح التخفيضات 🔥</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>+3000</strong><small>أداة طبية</small></div>
+        <div class="hero-stat"><strong>+10</strong><small>تخصصات طبية</small></div>
+        <div class="hero-stat"><strong>100%</strong><small>معتمدة ومعقمة</small></div>
+        <div class="hero-stat"><strong>24/7</strong><small>دعم فني</small></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-float">
+        <span class="offer-tag">🔥 عرض محدود</span>
+        <h3>ستيثوسكوب 3M Littmann الرقمي</h3>
+        <p>دقة استثنائية • صوت واضح • ضمان 5 سنوات</p>
+        <div class="hero-price">
+          <span class="new">1,800</span>
+          <span class="price-currency">جنيه</span>
+          <span class="old">2,400 جنيه</span>
+        </div>
+        <div class="progress-label">🛒 بقي 35% من الكمية</div>
+        <div class="progress-bar-wrap"><div class="progress-bar-fill"></div></div>
+        <div class="mini-pills">
+          <span class="mini-pill">✅ ضمان 2 سنة</span>
+          <span class="mini-pill">🚚 شحن مجاني</span>
+          <span class="mini-pill">⭐ 4.9/5</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon green">🚚</div>
+      <div class="trust-text"><strong>شحن سريع</strong><span>توصيل خلال 24-48 ساعة</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon blue">✅</div>
+      <div class="trust-text"><strong>منتجات مرخصة</strong><span>معتمدة من هيئة الدواء</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon red">🔄</div>
+      <div class="trust-text"><strong>إرجاع مجاني</strong><span>خلال 14 يوم من الاستلام</span></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-icon amber">💳</div>
+      <div class="trust-text"><strong>دفع آمن</strong><span>فيزا • ماستر • كاش</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<div class="section">
+  <div class="section-head">
+    <h2>تسوق حسب الفئة</h2>
+    <a class="see-all" href="#">عرض الكل →</a>
+  </div>
+  <div class="cats-grid">
+    <div class="cat-card" onclick="filterByCategory('قلب',null)">
+      <div class="cat-emoji" style="background:#fdf0ef">❤️</div>
+      <span>القلب والأوعية</span>
+    </div>
+    <div class="cat-card" onclick="filterByCategory('أسنان',null)">
+      <div class="cat-emoji" style="background:#eaf3fb">🦷</div>
+      <span>أدوات أسنان</span>
+    </div>
+    <div class="cat-card" onclick="filterByCategory('جراحة',null)">
+      <div class="cat-emoji" style="background:#e8f5ee">🔬</div>
+      <span>أدوات جراحة</span>
+    </div>
+    <div class="cat-card" onclick="filterByCategory('تنفس',null)">
+      <div class="cat-emoji" style="background:#eaf3fb">🫁</div>
+      <span>الجهاز التنفسي</span>
+    </div>
+    <div class="cat-card" onclick="filterByCategory('عظام',null)">
+      <div class="cat-emoji" style="background:#fff8e1">🦴</div>
+      <span>عظام وعمود فقري</span>
+    </div>
+    <div class="cat-card" onclick="filterByCategory('باطنة',null)">
+      <div class="cat-emoji" style="background:#e8f5ee">🩺</div>
+      <span>باطنة وتشخيص</span>
+    </div>
+    <div class="cat-card" onclick="filterByCategory('عيون',null)">
+      <div class="cat-emoji" style="background:#f3eeff">👁️</div>
+      <span>أدوات عيون</span>
+    </div>
+    <div class="cat-card" onclick="filterByCategory('أطفال',null)">
+      <div class="cat-emoji" style="background:#eaf3fb">👶</div>
+      <span>أدوات أطفال</span>
+    </div>
+    <div class="cat-card" onclick="filterByCategory('تمريض',null)">
+      <div class="cat-emoji" style="background:#e8f5ee">🏥</div>
+      <span>تمريض ورعاية</span>
+    </div>
+    <div class="cat-card" onclick="filterByCategory('مناظير',null)">
+      <div class="cat-emoji" style="background:#fff8e1">🔭</div>
+      <span>مناظير وتصوير</span>
+    </div>
+  </div>
+</div>
+
+<!-- OFFER BANNERS -->
+<div style="max-width:1300px;margin:0 auto;padding:0 20px 30px;">
+  <div class="banners-grid">
+    <div class="banner banner-1">
+      <div class="banner-text">
+        <small>⚡ عرض محدود</small>
+        <h3>خصم 30% على أدوات الجراحة</h3>
+        <p>مشارط، ملاقط، إبر خياطة وأدوات جراحية معقمة</p>
+        <button class="banner-btn" onclick="filterByCategory('جراحة',null)">تسوق الآن</button>
+      </div>
+      <div class="banner-emoji">🔬</div>
+    </div>
+    <div class="banner banner-2">
+      <div class="banner-text">
+        <small>🆕 وصل حديثاً</small>
+        <h3>أحدث أجهزة تشخيص القلب</h3>
+        <p>أجهزة ECG، ستيثوسكوب رقمي وأجهزة Holter</p>
+        <button class="banner-btn" onclick="filterByCategory('قلب',null)">اكتشف الآن</button>
+      </div>
+      <div class="banner-emoji">❤️</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="section">
+  <div class="section-head">
+    <h2 id="productsTitle">المنتجات المميزة</h2>
+    <a class="see-all" href="#" onclick="filterByCategory('all',null)">عرض الكل →</a>
+  </div>
+  <div class="products-grid" id="productsGrid">
+    <!-- Products rendered by JS -->
+  </div>
+</div>
+
+<!-- CART -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>🛒 سلة التسوق</h3>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <div class="empty-icon">🛒</div>
+      <p>سلتك فارغة حالياً</p>
+      <button class="btn-primary" onclick="toggleCart()">ابدأ التسوق</button>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-subtotal">
+      <span>المجموع الفرعي</span>
+      <span id="subtotalVal">0 جنيه</span>
+    </div>
+    <div class="cart-subtotal">
+      <span>الشحن</span>
+      <span style="color:var(--green);font-weight:700">مجاني 🎉</span>
+    </div>
+    <div class="cart-total">
+      <span>الإجمالي</span>
+      <span id="totalVal">0 جنيه</span>
+    </div>
+    <button class="checkout-btn">إتمام الطلب 🚀</button>
+    <button class="continue-btn" onclick="toggleCart()">متابعة التسوق</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">✅ تمت الإضافة للسلة</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-icon" id="logoIconFooter"></div>
+        <div class="logo-text">
+          <span>Medbay</span>
+          <span>الصيدلية الطبية</span>
+        </div>
+      </div>
+      <p>منصة Medbay هي وجهتك الأولى للأدوات والمعدات الطبية المتخصصة في مصر. نوفر أدوات لجميع التخصصات الطبية — من جراحة وأسنان وقلب وعظام وغيرها — بأعلى معايير الجودة والتعقيم.</p>
+      <div class="social-links" style="margin-top:16px">
+        <a class="social-link" href="#">f</a>
+        <a class="social-link" href="#">in</a>
+        <a class="social-link" href="#">tw</a>
+        <a class="social-link" href="#">yt</a>
+      </div>
+    </div>
+    <div>
+      <h4>روابط سريعة</h4>
+      <ul>
+        <li><a href="#">الرئيسية</a></li>
+        <li><a href="#">المنتجات</a></li>
+        <li><a href="#">العروض</a></li>
+        <li><a href="#">من نحن</a></li>
+        <li><a href="#">تواصل معنا</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>التخصصات</h4>
+      <ul>
+        <li><a href="#">أدوات القلب والأوعية</a></li>
+        <li><a href="#">أدوات الأسنان</a></li>
+        <li><a href="#">أدوات الجراحة</a></li>
+        <li><a href="#">الجهاز التنفسي</a></li>
+        <li><a href="#">عظام وعمود فقري</a></li>
+        <li><a href="#">أدوات العيون</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>خدمة العملاء</h4>
+      <ul>
+        <li><a href="#">سياسة الإرجاع</a></li>
+        <li><a href="#">الشحن والتوصيل</a></li>
+        <li><a href="#">الأسئلة الشائعة</a></li>
+        <li><a href="#">سياسة الخصوصية</a></li>
+        <li><a href="#">الشروط والأحكام</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Medbay — جميع الحقوق محفوظة</span>
+    <span>💳 Visa • Mastercard • Cash on Delivery • Fawry</span>
+        <span>powerd by eng/mahmoud hamada</span>
+
+  </div>
+</footer>
+
+<script>
+const products = [
+  // ❤️ القلب والأوعية
+  { id:1,  name:'جهاز رسم القلب ECG 12-Lead CONTEC', cat:'القلب والأوعية', emoji:'📈', price:3200, oldPrice:4500, rating:4.9, reviews:142, badge:'best', tags:['قلب'] },
+  { id:2,  name:'ستيثوسكوب طبي رقمي 3M Littmann', cat:'القلب والأوعية', emoji:'🩺', price:1800, oldPrice:2400, rating:4.9, reviews:310, badge:'best', tags:['قلب','باطنة'] },
+  { id:3,  name:'جهاز قياس ضغط الدم الرقمي OMRON M7', cat:'القلب والأوعية', emoji:'💓', price:650, oldPrice:900, rating:4.8, reviews:489, badge:'sale', tags:['قلب','باطنة'] },
+  { id:4,  name:'جهاز Holter مراقبة ضغط القلب 24 ساعة', cat:'القلب والأوعية', emoji:'📊', price:5800, oldPrice:7500, rating:4.7, reviews:58, badge:'new', tags:['قلب'] },
+
+  // 🦷 أسنان
+  { id:5,  name:'يونيت أسنان كرسي طبي كامل AJAX', cat:'أسنان', emoji:'🦷', price:42000, oldPrice:55000, rating:4.8, reviews:34, badge:'sale', tags:['أسنان'] },
+  { id:6,  name:'جهاز سونيك تنظيف الجير بالموجات فوق الصوتية', cat:'أسنان', emoji:'⚡', price:1200, oldPrice:1600, rating:4.7, reviews:211, badge:'best', tags:['أسنان'] },
+  { id:7,  name:'مجموعة أدوات فحص الأسنان الاستيل (8 قطع)', cat:'أسنان', emoji:'🔧', price:380, oldPrice:500, rating:4.6, reviews:176, badge:null, tags:['أسنان'] },
+  { id:8,  name:'جهاز أشعة X للأسنان البانورامي الرقمي', cat:'أسنان', emoji:'🔭', price:38000, oldPrice:48000, rating:4.9, reviews:22, badge:'new', tags:['أسنان','مناظير'] },
+
+  // 🔬 جراحة
+  { id:9,  name:'طقم مشارط جراحية استيل طبي (10 مقاس)', cat:'جراحة', emoji:'🔪', price:520, oldPrice:700, rating:4.8, reviews:98, badge:'best', tags:['جراحة'] },
+  { id:10, name:'خيوط جراحية قابلة للامتصاص Vicryl 2/0', cat:'جراحة', emoji:'🪡', price:95, oldPrice:130, rating:4.7, reviews:345, badge:null, tags:['جراحة','تمريض'] },
+  { id:11, name:'كوتر كهربائي جراحي أحادي القطب ERBE', cat:'جراحة', emoji:'⚡', price:12500, oldPrice:16000, rating:4.9, reviews:41, badge:'sale', tags:['جراحة'] },
+  { id:12, name:'مجموعة ملاقط جراحية استيل معقمة (12 قطعة)', cat:'جراحة', emoji:'🦾', price:750, oldPrice:1000, rating:4.6, reviews:133, badge:null, tags:['جراحة'] },
+
+  // 🫁 الجهاز التنفسي
+  { id:13, name:'جهاز تنفس صناعي CPAP للبالغين ResMed', cat:'الجهاز التنفسي', emoji:'💨', price:8500, oldPrice:11000, rating:4.9, reviews:87, badge:'best', tags:['تنفس'] },
+  { id:14, name:'جهاز نيبولايزر بخار ضاغط لعلاج الربو', cat:'الجهاز التنفسي', emoji:'🌬️', price:450, oldPrice:650, rating:4.7, reviews:412, badge:'sale', tags:['تنفس','أطفال'] },
+  { id:15, name:'جهاز قياس الأكسجين Pulse Oximeter المحمول', cat:'الجهاز التنفسي', emoji:'🩸', price:180, oldPrice:260, rating:4.7, reviews:623, badge:null, tags:['تنفس','باطنة'] },
+  { id:16, name:'أنبوب تنبيب endotracheal tube مقاس 7.5', cat:'الجهاز التنفسي', emoji:'🔴', price:45, oldPrice:null, rating:4.6, reviews:289, badge:null, tags:['تنفس','جراحة'] },
+
+  // 🦴 عظام وعمود فقري
+  { id:17, name:'جهاز موجات صوتية علاج العظام والمفاصل', cat:'عظام وعمود فقري', emoji:'🦴', price:6200, oldPrice:8500, rating:4.8, reviews:63, badge:'sale', tags:['عظام'] },
+  { id:18, name:'حزام ظهر طبي دعم الفقرات القطنية', cat:'عظام وعمود فقري', emoji:'🦺', price:380, oldPrice:520, rating:4.6, reviews:298, badge:null, tags:['عظام'] },
+  { id:19, name:'جبيرة يد لدعم الرسغ بعد الكسر', cat:'عظام وعمود فقري', emoji:'🖐️', price:220, oldPrice:300, rating:4.5, reviews:187, badge:null, tags:['عظام','جراحة'] },
+  { id:20, name:'جهاز تحفيز كهربائي TENS لتسكين آلام العظام', cat:'عظام وعمود فقري', emoji:'⚡', price:950, oldPrice:1300, rating:4.7, reviews:154, badge:'new', tags:['عظام'] },
+
+  // 🩺 باطنة وتشخيص
+  { id:21, name:'جهاز قياس السكر في الدم ACCU-CHEK Instant', cat:'باطنة وتشخيص', emoji:'📊', price:550, oldPrice:750, rating:4.8, reviews:534, badge:'best', tags:['باطنة'] },
+  { id:22, name:'جهاز قياس درجة الحرارة الأذني الرقمي', cat:'باطنة وتشخيص', emoji:'🌡️', price:320, oldPrice:450, rating:4.7, reviews:401, badge:null, tags:['باطنة','أطفال'] },
+  { id:23, name:'منظار الأذن والعين الرقمي Otoscope LED', cat:'باطنة وتشخيص', emoji:'🔦', price:1100, oldPrice:1500, rating:4.6, reviews:112, badge:'sale', tags:['باطنة','عيون'] },
+  { id:24, name:'جهاز الموجات الصوتية (الإيكو) المحمول Mindray', cat:'باطنة وتشخيص', emoji:'📡', price:28000, oldPrice:36000, rating:4.9, reviews:29, badge:'new', tags:['باطنة','مناظير'] },
+
+  // 👁️ عيون
+  { id:25, name:'جهاز قياس ضغط العين Tonometer اللاتلامسي', cat:'أدوات عيون', emoji:'👁️', price:15500, oldPrice:20000, rating:4.8, reviews:38, badge:'sale', tags:['عيون'] },
+  { id:26, name:'مقياس حدة النظر Snellen LED Chart رقمي', cat:'أدوات عيون', emoji:'🔤', price:2200, oldPrice:3000, rating:4.7, reviews:76, badge:null, tags:['عيون'] },
+  { id:27, name:'منظار شبكية العين Fundus Camera محمول', cat:'أدوات عيون', emoji:'🔭', price:22000, oldPrice:28000, rating:4.9, reviews:17, badge:'new', tags:['عيون','مناظير'] },
+
+  // 👶 أطفال
+  { id:28, name:'حاضنة أطفال حديثي الولادة المنزلية', cat:'أدوات أطفال', emoji:'🍼', price:9800, oldPrice:13000, rating:4.9, reviews:44, badge:'best', tags:['أطفال'] },
+  { id:29, name:'جهاز مراقبة تنفس الرضع Baby Monitor Medical', cat:'أدوات أطفال', emoji:'👶', price:1850, oldPrice:2500, rating:4.7, reviews:133, badge:'sale', tags:['أطفال','تنفس'] },
+  { id:30, name:'جهاز شفط بلغم أطفال كهربائي صامت', cat:'أدوات أطفال', emoji:'💨', price:480, oldPrice:650, rating:4.6, reviews:222, badge:null, tags:['أطفال','تنفس'] },
+
+  // 🏥 تمريض ورعاية
+  { id:31, name:'سرير طبي كهربائي متعدد الوضعيات', cat:'تمريض ورعاية', emoji:'🛏️', price:18500, oldPrice:24000, rating:4.8, reviews:52, badge:'sale', tags:['تمريض'] },
+  { id:32, name:'كرسي متحرك طبي خفيف للتنقل', cat:'تمريض ورعاية', emoji:'♿', price:2800, oldPrice:3800, rating:4.7, reviews:189, badge:null, tags:['تمريض','عظام'] },
+  { id:33, name:'عكاز طبي ألمنيوم قابل للتعديل (زوج)', cat:'تمريض ورعاية', emoji:'🦯', price:320, oldPrice:450, rating:4.5, reviews:267, badge:null, tags:['تمريض','عظام'] },
+  { id:34, name:'جهاز ضخ IV Infusion Pump ذكي', cat:'تمريض ورعاية', emoji:'💉', price:7200, oldPrice:9500, rating:4.8, reviews:63, badge:'new', tags:['تمريض','جراحة'] },
+
+  // 🔭 مناظير وتصوير
+  { id:35, name:'منظار بطن Laparoscope مع كاميرا HD', cat:'مناظير وتصوير', emoji:'🔭', price:65000, oldPrice:82000, rating:4.9, reviews:11, badge:'sale', tags:['مناظير','جراحة'] },
+  { id:36, name:'كاميرا داخلية Endoscope للمسالك الهضمية', cat:'مناظير وتصوير', emoji:'📹', price:48000, oldPrice:62000, rating:4.8, reviews:16, badge:'new', tags:['مناظير','باطنة'] },
+];
+
+// ====== CONFIG - ضع روابط الصور هنا ======
+const LOGO_URL = 'logo.svg'; // ضع رابط أو مسار اللوجو SVG هنا
+const PRODUCT_IMAGES = {
+  1:  'https://images.pexels.com/photos/263194/pexels-photo-263194.jpeg?auto=compress&cs=tinysrgb&w=800',
+  2:  'https://images.pexels.com/photos/3845129/pexels-photo-3845129.jpeg?auto=compress&cs=tinysrgb&w=800',
+  3:  'https://images.pexels.com/photos/8670204/pexels-photo-8670204.jpeg?auto=compress&cs=tinysrgb&w=800',
+  4:  'https://images.pexels.com/photos/7089618/pexels-photo-7089618.jpeg?auto=compress&cs=tinysrgb&w=800',
+  5:  'https://images.pexels.com/photos/7088496/pexels-photo-7088496.jpeg?auto=compress&cs=tinysrgb&w=800',
+  6:  'https://images.pexels.com/photos/7108402/pexels-photo-7108402.jpeg?auto=compress&cs=tinysrgb&w=800',
+  7:  'https://images.pexels.com/photos/8943340/pexels-photo-8943340.jpeg?auto=compress&cs=tinysrgb&w=800',
+  8:  'https://images.pexels.com/photos/5996607/pexels-photo-5996607.jpeg?auto=compress&cs=tinysrgb&w=800',
+  9:  'https://images.pexels.com/photos/7108123/pexels-photo-7108123.jpeg?auto=compress&cs=tinysrgb&w=800',
+  10: 'https://images.pexels.com/photos/9408863/pexels-photo-9408863.jpeg?auto=compress&cs=tinysrgb&w=800',
+  11: 'https://images.pexels.com/photos/8943283/pexels-photo-8943283.jpeg?auto=compress&cs=tinysrgb&w=800',
+  12: 'https://images.pexels.com/photos/8442446/pexels-photo-8442446.jpeg?auto=compress&cs=tinysrgb&w=800',
+  13: 'https://images.pexels.com/photos/8376218/pexels-photo-8376218.jpeg?auto=compress&cs=tinysrgb&w=800',
+  14: 'https://images.pexels.com/photos/7580256/pexels-photo-7580256.jpeg?auto=compress&cs=tinysrgb&w=800',
+  15: 'https://images.pexels.com/photos/8352131/pexels-photo-8352131.jpeg?auto=compress&cs=tinysrgb&w=800',
+  16: 'https://images.pexels.com/photos/5721676/pexels-photo-5721676.jpeg?auto=compress&cs=tinysrgb&w=800',
+  17: 'https://images.pexels.com/photos/10987574/pexels-photo-10987574.jpeg?auto=compress&cs=tinysrgb&w=800',
+  18: 'https://images.pexels.com/photos/31188648/pexels-photo-31188648.jpeg?auto=compress&cs=tinysrgb&w=800',
+  19: 'https://images.pexels.com/photos/4483329/pexels-photo-4483329.jpeg?auto=compress&cs=tinysrgb&w=800',
+  20: 'https://images.pexels.com/photos/8943373/pexels-photo-8943373.jpeg?auto=compress&cs=tinysrgb&w=800',
+  21: 'https://images.pexels.com/photos/3845129/pexels-photo-3845129.jpeg?auto=compress&cs=tinysrgb&w=800',
+  22: 'https://images.pexels.com/photos/8670204/pexels-photo-8670204.jpeg?auto=compress&cs=tinysrgb&w=800',
+  23: 'https://images.pexels.com/photos/9408863/pexels-photo-9408863.jpeg?auto=compress&cs=tinysrgb&w=800',
+  24: 'https://images.pexels.com/photos/7088496/pexels-photo-7088496.jpeg?auto=compress&cs=tinysrgb&w=800',
+  25: 'https://images.pexels.com/photos/7108402/pexels-photo-7108402.jpeg?auto=compress&cs=tinysrgb&w=800',
+  26: 'https://images.pexels.com/photos/8376218/pexels-photo-8376218.jpeg?auto=compress&cs=tinysrgb&w=800',
+  27: 'https://images.pexels.com/photos/263194/pexels-photo-263194.jpeg?auto=compress&cs=tinysrgb&w=800',
+  28: 'https://images.pexels.com/photos/9408869/pexels-photo-9408869.jpeg?auto=compress&cs=tinysrgb&w=800',
+  29: 'https://images.pexels.com/photos/5875565/pexels-photo-5875565.jpeg?auto=compress&cs=tinysrgb&w=800',
+  30: 'https://images.pexels.com/photos/7029072/pexels-photo-7029072.jpeg?auto=compress&cs=tinysrgb&w=800',
+  31: 'https://images.pexels.com/photos/8352131/pexels-photo-8352131.jpeg?auto=compress&cs=tinysrgb&w=800',
+  32: 'https://images.pexels.com/photos/5721676/pexels-photo-5721676.jpeg?auto=compress&cs=tinysrgb&w=800',
+  33: 'https://images.pexels.com/photos/7089618/pexels-photo-7089618.jpeg?auto=compress&cs=tinysrgb&w=800',
+  34: 'https://images.pexels.com/photos/8943340/pexels-photo-8943340.jpeg?auto=compress&cs=tinysrgb&w=800',
+  35: 'https://images.pexels.com/photos/5996607/pexels-photo-5996607.jpeg?auto=compress&cs=tinysrgb&w=800',
+  36: 'https://images.pexels.com/photos/7580256/pexels-photo-7580256.jpeg?auto=compress&cs=tinysrgb&w=800',
+};
+// ==========================================
+let activeFilter = 'all';
+let wishlist = new Set();
+let cart = JSON.parse(localStorage.getItem('medbayCart') || '[]');
+if (!Array.isArray(cart)) cart = [];
+
+function saveCart() { localStorage.setItem('medbayCart', JSON.stringify(cart)); }
+
+function renderProducts(list) {
+  const grid = document.getElementById('productsGrid');
+  if (!list.length) {
+    grid.innerHTML = '<p style="text-align:center;color:var(--text3);padding:40px;grid-column:1/-1">لا توجد منتجات في هذه الفئة</p>';
+    return;
+  }
+  grid.innerHTML = list.map(p => {
+    const inCart = cart.find(i => i.id === p.id);
+    const inWish = wishlist.has(p.id);
+    const badge = p.badge === 'sale' ? '<span class="product-badge badge-sale">خصم</span>'
+                : p.badge === 'new' ? '<span class="product-badge badge-new">جديد</span>'
+                : p.badge === 'best' ? '<span class="product-badge badge-best">الأكثر مبيعاً</span>' : '';
+    const oldPrice = p.oldPrice ? `<span class="price-old">${p.oldPrice}</span>` : '';
+      const imgSrc = PRODUCT_IMAGES[p.id];
+      const imgHtml = imgSrc
+        ? `<img src="${imgSrc}" alt="${p.name}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=\\'img-placeholder\\'><span>${p.emoji}</span><small>صورة غير متاحة</small></div>'">`
+        : `<div class="img-placeholder"><span>${p.emoji}</span></div>`;
+    return `
+    <div class="product-card" onclick="openProduct(${p.id})">
+      ${badge}
+      <div class="product-img" style="background:${getBg(p.cat)}">
+        ${imgHtml}
+        <div class="product-wishlist ${inWish?'active':''}" onclick="toggleWish(event,${p.id})">${inWish?'❤️':'🤍'}</div>
+      </div>
+      <div class="product-body">
+        <div class="product-cat-tag">${p.cat}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-rating">
+          <span class="stars">${'★'.repeat(Math.floor(p.rating))}${ p.rating % 1 >= 0.5 ? '½' : ''}</span>
+          <span>${p.rating} (${p.reviews.toLocaleString('ar')})</span>
+        </div>
+        <div class="product-price-row">
+          <div class="price-wrap">
+            <span class="price-new">${p.price}</span>
+            <span class="price-currency">جنيه</span>
+            ${oldPrice}
+          </div>
+          <button class="add-btn ${inCart?'added':''}" onclick="addToCart(event,${p.id})">
+            ${inCart ? '✓ مضاف' : '+ أضف'}
+          </button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function getBg(cat) {
+  const map = {
+    'القلب والأوعية': '#fdf0ef',
+    'أسنان': '#eaf3fb',
+    'جراحة': '#e8f5ee',
+    'الجهاز التنفسي': '#eaf3fb',
+    'عظام وعمود فقري': '#fff8e1',
+    'باطنة وتشخيص': '#e8f5ee',
+    'أدوات عيون': '#f3eeff',
+    'أدوات أطفال': '#eaf3fb',
+    'تمريض ورعاية': '#e8f5ee',
+    'مناظير وتصوير': '#fff8e1',
+  };
+  return map[cat] || '#f7f9fc';
+}
+
+function filterByCategory(cat, linkEl) {
+  activeFilter = cat;
+  document.querySelectorAll('.cat-link').forEach(l => l.classList.remove('active'));
+  if (linkEl) linkEl.classList.add('active');
+  const filtered = cat === 'all' ? products : products.filter(p => p.tags.some(t => t.includes(cat) || cat.includes(t)));
+  document.getElementById('productsTitle').textContent = cat === 'all' ? 'جميع المنتجات' : 'فئة: ' + cat;
+  renderProducts(filtered);
+  document.querySelector('.section').scrollIntoView({ behavior: 'smooth' });
+}
+
+function filterProducts() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  if (!q) { renderProducts(products); return; }
+  const filtered = products.filter(p => p.name.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q));
+  renderProducts(filtered);
+}
+
+function addToCart(e, id) {
+  e.stopPropagation();
+  const p = products.find(x => x.id === id);
+  const existing = cart.find(x => x.id === id);
+  if (existing) { existing.qty++; }
+  else { cart.push({ id, name: p.name, emoji: p.emoji, price: p.price, qty: 1 }); }
+  saveCart();
+  updateCartUI();
+  renderProducts(activeFilter === 'all' ? products : products.filter(p2 => p2.tags.some(t => t.includes(activeFilter))));
+  showToast('تمت الإضافة: ' + p.name);
+}
+
+function toggleWish(e, id) {
+  e.stopPropagation();
+  if (wishlist.has(id)) wishlist.delete(id);
+  else wishlist.add(id);
+  renderProducts(activeFilter === 'all' ? products : products.filter(p => p.tags.some(t => t.includes(activeFilter))));
+}
+
+function openProduct(id) {
+  const p = products.find(x => x.id === id);
+  showToast('عرض: ' + p.name);
+}
+
+function updateCartUI() {
+  const count = cart.reduce((s, i) => s + i.qty, 0);
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  document.getElementById('cartBadge').textContent = count;
+
+  const container = document.getElementById('cartItems');
+  const footer = document.getElementById('cartFooter');
+
+  if (!cart.length) {
+    container.innerHTML = `<div class="cart-empty"><div class="empty-icon">🛒</div><p>سلتك فارغة حالياً</p><button class="btn-primary" onclick="toggleCart()">ابدأ التسوق</button></div>`;
+    footer.style.display = 'none';
+    return;
+  }
+
+  footer.style.display = 'block';
+  document.getElementById('subtotalVal').textContent = total.toLocaleString('ar') + ' جنيه';
+  document.getElementById('totalVal').textContent = total.toLocaleString('ar') + ' جنيه';
+
+  container.innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <div class="cart-item-icon">${item.emoji}</div>
+      <div class="cart-item-info">
+        <div class="name">${item.name}</div>
+        <div class="price">${(item.price * item.qty).toLocaleString('ar')} جنيه</div>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="changeQty(${item.id},-1)">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${item.id},1)">+</button>
+        </div>
+      </div>
+      <button class="item-remove" onclick="removeItem(${item.id})">🗑</button>
+    </div>
+  `).join('');
+}
+
+function changeQty(id, delta) {
+  const item = cart.find(x => x.id === id);
+  if (!item) return;
+  item.qty += delta;
+  if (item.qty <= 0) cart = cart.filter(x => x.id !== id);
+  saveCart();
+  updateCartUI();
+}
+
+function removeItem(id) {
+  cart = cart.filter(x => x.id !== id);
+  saveCart();
+  updateCartUI();
+}
+
+function toggleCart() {
+  document.getElementById('cartSidebar').classList.toggle('open');
+  document.getElementById('cartOverlay').classList.toggle('open');
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = '✅ ' + msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+function initLogo() {
+  const icons = [document.getElementById('logoIconNav'), document.getElementById('logoIconFooter')];
+  icons.forEach(el => {
+    if (!el) return;
+    if (LOGO_URL) {
+      el.innerHTML = `<img src="${LOGO_URL}" alt="Medbay Logo" onerror="this.parentNode.classList.add('fallback');this.parentNode.innerHTML='M'">`;
+    } else {
+      el.classList.add('fallback');
+      el.textContent = 'M';
+    }
+  });
+}
+
+// Init
+initLogo();
+renderProducts(products);
+updateCartUI();
+</script>
+</body>
+</html>
